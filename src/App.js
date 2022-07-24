@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 function App() {
   const [imageArray, setImageArray] = useState(null);
 
-  const ip = "192.168.105.139";
+  const ip = "192.168.29.249";
 
   useEffect(() => {
     fetch(`http://${ip}:3001/media/images`)
@@ -28,7 +28,7 @@ function App() {
       <form
         encType="multipart/form-data"
         multiple
-        action={`http://${ip}:3001/upload`}
+        action={`http://${ip}:3001/upload/img`}
         method="post"
       >
         <input type="file" multiple name="file" id="file" />
